@@ -15,8 +15,7 @@ const App = () => {
     useEffect(() => {
         dispatch(getPosts());
         console.log("ding");
-        // INVESTIGATE HERE ABOUT HOOKS DEPENDENCIES
-    }, [currentId, dispatch]);
+    }, [dispatch]);
 
     return (
         <Container maxWidth="lg">

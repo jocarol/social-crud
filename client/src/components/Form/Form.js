@@ -25,7 +25,6 @@ const Form = ({ currentId, setCurrentId }) => {
 
     useEffect(() => {
         if (post) setPostData(post);
-        console.log("postData", postData);
     }, [post]);
 
     const handleSubmit = (e) => {
@@ -37,7 +36,7 @@ const Form = ({ currentId, setCurrentId }) => {
             console.log("dispatching a creation")
             dispatch(createPost(postData));
         }
-        clear();
+            clear();
     }
 
     const clear = () => {
