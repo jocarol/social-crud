@@ -17,10 +17,11 @@ const Form = ({ currentId, setCurrentId }) => {
     const [postData, setPostData] = useState(postObjectTemplate)
     const post = useSelector((state) => currentId ? state.posts.find(post => post._id === currentId) : null);
     //useSelector(state => console.log(state.posts));
-    console.log("post",post);
-    console.log("currentId",currentId);
+    console.log("post", post);
+    console.log("currentId", currentId);
     const classes = useStyles();
     const dispatch = useDispatch();
+    console.log(setCurrentId);
 
     useEffect(() => {
         if (post) setPostData(post);
@@ -36,6 +37,7 @@ const Form = ({ currentId, setCurrentId }) => {
             console.log("dispatching a creation")
             dispatch(createPost(postData));
         }
+        clear();
     }
 
     const clear = () => {

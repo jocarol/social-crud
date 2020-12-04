@@ -14,7 +14,9 @@ const App = () => {
 
     useEffect(() => {
         dispatch(getPosts());
-    }, [dispatch]);
+        console.log("ding");
+        // INVESTIGATE HERE ABOUT HOOKS DEPENDENCIES
+    }, [currentId, dispatch]);
 
     return (
         <Container maxWidth="lg">
@@ -33,7 +35,7 @@ const App = () => {
                             <Posts setCurrentId={setCurrentId} />
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <Form currentId={currentId} setCurrentid={setCurrentId} />
+                            <Form currentId={currentId} setCurrentId={setCurrentId} />
                         </Grid>
                     </Grid>
                 </Container>
