@@ -15,7 +15,7 @@ const App = () => {
     useEffect(() => {
         dispatch(getPosts());
         console.log("ding");
-    }, [dispatch]);
+    }, [currentId, dispatch]);
 
     return (
         <Container maxWidth="lg">
@@ -24,7 +24,7 @@ const App = () => {
             </AppBar>
             <Grow in>
                 <Container>
-                    <Grid 
+                    <Grid
                         container
                         justify="space-between"
                         alignItems="stretch"
