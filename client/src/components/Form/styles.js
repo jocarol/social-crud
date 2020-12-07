@@ -1,3 +1,4 @@
+import { red } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
@@ -12,9 +13,6 @@ export default makeStyles((theme) => ({
     borderStyle: 'dashed',
     borderColor: '#ff5757',
   },
-  fieldset:{
-    borderColor: 'red',
-  },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -26,7 +24,14 @@ export default makeStyles((theme) => ({
     height: '0.1px',
     position: 'absolute',
   },
+  buttonPrimary: {
+    backgroundColor:'#038288',
+    '&:hover' : {
+      backgroundColor: '#00d3dd',
+    }
+  },
   buttonSubmit: {
     marginBottom: 10,
+    marginTop:10,
   },
 }));

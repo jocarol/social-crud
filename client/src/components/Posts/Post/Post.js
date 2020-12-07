@@ -79,19 +79,19 @@ const Post = ({ post, setCurrentId }) => {
             </CardContent>
             <CardContent>
             </CardContent>
-            <CardActions className={classes.cardActions}>
+            <CardActions className={classes.cardActionsContainer}>
                 <Button
                     size="small"
-                    color="primary"
+                    className={classes.likeDeleteButtons}
                     onClick={likeHandler}
                 >
                     <ThumbUpAltIcon fontSize="small" />
-                    Like
+                    Like &nbsp;
                     {post.likeCount}
                 </Button>
                 <Button
                     size="small"
-                    color="primary"
+                    className={classes.likeDeleteButtons}
                     onClick={deleteHandler}
                 >
                     <DeleteIcon fontSize="small" />

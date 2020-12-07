@@ -5,6 +5,9 @@ export default makeStyles({
     height: 0,
     paddingTop: '56.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    '&:hover': {
+      backgroundColor: 'unset',
+    },
     backgroundBlendMode: 'darken',
     transition: 'ease 0.2s',
   },
@@ -21,7 +24,7 @@ export default makeStyles({
     borderRadius: '15px',
     height: '100%',
     position: 'relative',
-    backgroundColor: 'rgb(33, 33, 33);',
+    backgroundColor: 'rgb(27, 27, 27);',
   },
   overlay: {
     position: 'absolute',
@@ -46,9 +49,16 @@ export default makeStyles({
   title: {
     padding: '0 16px',
   },
-  cardActions: {
+  cardActionsContainer: {
     padding: '0 16px 8px 16px',
     display: 'flex',
     justifyContent: 'space-between',
   },
+  likeDeleteButtons: {
+    transition: 'ease 0.2s',
+    color: '#04a5ad',
+    '&:hover' : {
+      color: '#00d3dd'
+    }
+  }
 });

@@ -7,15 +7,7 @@ body {
     background-size: cover;
 }
 
-.MuiButton-textPrimary {
-    color: #038288 !important;
-    transition: 0.2s;
-}
 
-.MuiButton-textPrimary:hover {
-    color: #00d3dd !important;
-    transition: 0.2s;
-}
 
 .MuiTypography-colorTextSecondary {
     color: rgba(255, 255, 255, 0.54) !important;
@@ -29,11 +21,11 @@ body {
     color: #818181;
 }
 
-.media:hover {
-    background-color: unset;
+/* Form fields */
+.MuiOutlinedInput-notchedOutline {
+    border-color:#383838 !important
 }
 
-/* Form fields */
 .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined {
     color: #818181;
 }
@@ -50,19 +42,6 @@ body {
     color : #bcbcbc !important;
 }
 
-.MuiButton-containedPrimary {
-    color: #fff;
-    background-color: #04a5ad !important;
-    margin-top: 8px !important;
-}
-
-.MuiButton-containedPrimary:hover {
-    background-color: #00d3dd !important;
-}
-
-.makeStyles-media-17:hover {
-    background-color: rgba(0, 0, 0, 0.295);
-}
 
 input {
     width: 123px;

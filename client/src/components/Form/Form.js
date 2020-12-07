@@ -51,8 +51,9 @@ const Form = ({ currentId, setCurrentId }) => {
                 className={`${classes.root} ${classes.form}`}
                 onSubmit={handleSubmit}
             >
-                <Typography variant="h6">{currentId ? 'Edit' : 'Create & share'} a memory</Typography>
+                <Typography variant="h6">{currentId ? 'Edit' : 'Create & share'} a card</Typography>
                 <TextField
+                className={classes.fieldset}
                     name="creator"
                     variant="outlined"
                     label="Creator"
@@ -84,7 +85,7 @@ const Form = ({ currentId, setCurrentId }) => {
                     label="Tags"
                     value={postData.tags || ''}
                     fullWidth
-                    onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
+                    onChange={(e) => setPostData({ ...postData, tags: e.target.value.trim().split(',') })}
                 />
                 <div>
                     <FileBase
@@ -95,7 +96,7 @@ const Form = ({ currentId, setCurrentId }) => {
                     </FileBase>
                 </div>
                 <Button
-                    className={classes.buttonSubmit}
+                    className={`${classes.buttonSubmit} ${classes.buttonPrimary}`}
                     variant="contained"
                     color="primary"
                     size="large"
