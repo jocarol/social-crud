@@ -1,12 +1,19 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
+import {
+    Card,
+    CardActions,
+    CardContent,
+    CardMedia,
+    Button,
+    Typography
+} from '@material-ui/core';
 import moment from 'moment';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 import { useDispatch } from 'react-redux';
-import { deletePost, getPosts } from '../../../actions/posts';
+import { deletePost, getPosts, likePost } from '../../../actions/posts';
 import useStyles from './styles';
 
 const Post = ({ post, setCurrentId }) => {
@@ -14,8 +21,13 @@ const Post = ({ post, setCurrentId }) => {
     const dispatch = useDispatch();
 
     const deleteHandler = () => {
-        dispatch(deletePost(post._id));
-        dispatch(getPosts());
+        dispatch(deletePost(post._id))
+            .then(() => dispatch(getPosts()));
+    }
+
+    const likeHandler = () => {
+        dispatch(likePost(post._id))
+            .then(() => dispatch(getPosts()));
     }
 
     return (
@@ -52,7 +64,7 @@ const Post = ({ post, setCurrentId }) => {
             </div>
             <Typography
                 className={classes.title}
-                variant="h5"
+                variant="h4"
                 gutterBottom
             >
                 {post.title}
@@ -71,7 +83,7 @@ const Post = ({ post, setCurrentId }) => {
                 <Button
                     size="small"
                     color="primary"
-                    onClick={() => { }}
+                    onClick={likeHandler}
                 >
                     <ThumbUpAltIcon fontSize="small" />
                     Like
@@ -80,7 +92,7 @@ const Post = ({ post, setCurrentId }) => {
                 <Button
                     size="small"
                     color="primary"
-                    onClick={() => deleteHandler()}
+                    onClick={deleteHandler}
                 >
                     <DeleteIcon fontSize="small" />
                     Delete

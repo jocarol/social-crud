@@ -16,7 +16,6 @@ const Form = ({ currentId, setCurrentId }) => {
     }
     const [postData, setPostData] = useState(postObjectTemplate)
     const post = useSelector((state) => currentId ? state.posts.find(post => post._id === currentId) : null);
-    //useSelector(state => console.log(state.posts));
     console.log("post", post);
     console.log("currentId", currentId);
     const classes = useStyles();
@@ -87,7 +86,7 @@ const Form = ({ currentId, setCurrentId }) => {
                     fullWidth
                     onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
                 />
-                <div className={classes.fileInput}>
+                <div>
                     <FileBase
                         type="file"
                         multiple={false}

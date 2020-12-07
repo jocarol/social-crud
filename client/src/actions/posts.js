@@ -5,6 +5,7 @@ const POSTS_ACTIONS = {
     CREATE: 'CREATE',
     UPDATE: 'UPDATE',
     DELETE: 'DELETE',
+    LIKE: 'LIKE',
 }
 
 // Action Creators
@@ -45,5 +46,16 @@ export const deletePost = (id) => async (dispatch) => {
         dispatch({ type: POSTS_ACTIONS.DELETE, payload: id });
     } catch (error) {
         console.log(error);
+    }
+}
+
+export const likePost = (id) => async (dispatch) => {
+    try {
+        const data = await api.likePost(id);
+
+        console.log("like dispatched");
+        dispatch({ type: POSTS_ACTIONS.LIKE, payload: data })
+    } catch (error) {
+        console.log(error.message);
     }
 }
