@@ -7,8 +7,6 @@ body {
     background-size: cover;
 }
 
-
-
 .MuiTypography-colorTextSecondary {
     color: rgba(255, 255, 255, 0.54) !important;
 }
@@ -23,7 +21,7 @@ body {
 
 /* Form fields */
 .MuiOutlinedInput-notchedOutline {
-    border-color:#383838 !important
+    border-color: #383838 !important;
 }
 
 .MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-outlined {
@@ -39,9 +37,8 @@ body {
 }
 
 .MuiInputBase-input {
-    color : #bcbcbc !important;
+    color: #bcbcbc !important;
 }
-
 
 input {
     width: 123px;

@@ -8,7 +8,6 @@ import postRoutes from './routes/posts.js';
 
 const app = express();
 dotenv.config();
-const CONNECTION_URL = 'mongodb+srv://jocarol:Coucou123*@cluster0.mdoca.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));

@@ -23,7 +23,7 @@ const Posts = ({ setCurrentId }) => {
                         sm={6}
                         item
                     >
-                        <Post post={post} setCurrentId={setCurrentId}/>
+                        <Post post={post} setCurrentId={setCurrentId} />
                     </Grid>
                 ))}
             </Grid>
