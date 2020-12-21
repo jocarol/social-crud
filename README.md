@@ -2,7 +2,7 @@
 
 ## Info
 
-#### Social C.R.U.D is a simple... social C.R.U.D application built upon a MERN stack. Users can Create, Read, Update & Delete posts. Node.js & Express is powering the back, while React & Material UI takes care of the front.
+#### Social C.R.U.D is a simple... social C.R.U.D application built upon a MERN stack. Users can Create, Read, Update & Delete posts. Node.js & Express are powering the back, while React & Material UI takes care of the front.
 
 CRUD operations are operated over REST API routes :
 
