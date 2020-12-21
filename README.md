@@ -1,4 +1,4 @@
-![alt](https://i.imgur.com/wroOsFp.png)
+![alt](demo.gif)
 
 ## Info
 
