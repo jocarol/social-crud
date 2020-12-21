@@ -1,5 +1,3 @@
-![alt](https://i.imgur.com/17IT6lT.png)
-
 ![alt](https://i.imgur.com/wroOsFp.png)
 
 ## Info
